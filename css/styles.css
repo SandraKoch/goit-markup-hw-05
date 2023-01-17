@@ -205,6 +205,19 @@ transition: [property] [duration] [timing-function] [delay] */
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 9999;
+  transform: scale(1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  animation: animate125 3000ms 1 cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes animate125 {
+  0% {
+    transform: scale(1.25);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 .modal {
@@ -217,7 +230,6 @@ transition: [property] [duration] [timing-function] [delay] */
     0px 2px 1px rgba(0, 0, 0, 0.2);
   justify-content: right;
   align-items: flex-start;
-  /* transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
 .modal__button {
